@@ -1,0 +1,366 @@
+body,
+html {
+  height: 100%;
+  width: 100%; }
+
+body {
+  position: relative;
+  overflow: hidden;
+  background: #7db9e8;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-name: backgroundChange; }
+
+#mainNav {
+  z-index: 30 !important;
+  background: white !important;
+  box-shadow: 1px 1px 3px black !important; }
+
+#mainNav a {
+  color: #000 !important; }
+
+.wave {
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out; }
+
+#front-wave {
+  z-index: 3;
+  bottom: -7%;
+  left: -1%;
+  width: 130%;
+  animation-name: frontWave;
+  animation-duration: 8s; }
+
+#middle-wave {
+  z-index: 2;
+  bottom: -15%;
+  right: -1%;
+  width: 130%;
+  animation-name: middleWave;
+  animation-duration: 12s; }
+
+#back-wave {
+  z-index: 1;
+  bottom: -11%;
+  left: -1%;
+  width: 130%;
+  animation-name: backWave;
+  animation-duration: 16s; }
+
+.fish {
+  position: absolute;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+#front-fish {
+  z-index: 3;
+  bottom: -10%;
+  animation-name: frontFish;
+  animation-duration: 10s;
+  animation-delay: 6s; }
+
+#middle-fish {
+  z-index: 2;
+  bottom: -10%;
+  animation-name: middleFish;
+  animation-duration: 12s;
+  animation-delay: 4s; }
+
+#back-fish {
+  z-index: 1;
+  width: 10%;
+  bottom: -10%;
+  animation-name: backFish;
+  animation-duration: 14s;
+  animation-delay: 1s;
+  transform: rotate(-180deg); }
+
+.cloud {
+  position: absolute;
+  z-index: 1;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+.cloud-1 {
+  width: 15%;
+  top: 10%;
+  animation-duration: 40s; }
+
+#cloud-1 {
+  animation-name: cloud1; }
+
+#cloud-1-replace {
+  animation-name: cloud1Replace; }
+
+.cloud-2 {
+  transform: translateX(40%);
+  width: 10%;
+  top: 3%;
+  animation-duration: 45s;
+  transform: rotateY(180deg); }
+
+#cloud-2 {
+  animation-name: cloud2; }
+
+#cloud-2-replace {
+  animation-name: cloud2Replace; }
+
+.cloud-3 {
+  transform: translateX(60%);
+  width: 12%;
+  top: 12%;
+  animation-duration: 32s; }
+
+#cloud-3 {
+  animation-name: cloud3; }
+
+#cloud-3-replace {
+  animation-name: cloud3Replace; }
+
+.cloud-4 {
+  transform: translateX(80%);
+  width: 21%;
+  top: 16%;
+  animation-duration: 38s;
+  transform: rotateY(180deg); }
+
+#cloud-4 {
+  animation-name: cloud4; }
+
+#cloud-4-replace {
+  animation-name: cloud4Replace; }
+
+.cloud-5 {
+  top: 10%;
+  width: 20%;
+  animation-duration: 50s; }
+
+#cloud-5 {
+  animation-name: cloud5; }
+
+#cloud-5-replace {
+  animation-name: cloud5Replace; }
+
+.cloud-6 {
+  transform: translateX(-10%);
+  top: 15%;
+  width: 20%;
+  animation-duration: 46s;
+  transform: rotateY(180deg); }
+
+#cloud-6 {
+  animation-name: cloud6; }
+
+#cloud-6-replace {
+  animation-name: cloud6Replace; }
+
+#moon {
+  z-index: 0;
+  position: absolute;
+  width: 50%;
+  left: 22%;
+  top: -110%;
+  animation-name: moon;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 30s; }
+
+#sun {
+  position: absolute;
+  width: 50%;
+  left: 20%;
+  bottom: -60%;
+  animation-name: sun;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 30s; }
+
+/* Animations */
+@keyframes backgroundChange {
+  0% {
+    background: #7db9e8; }
+  20% {
+    background: #7db9e8; }
+  35% {
+    background: #282828; }
+  60% {
+    background: #282828; }
+  75% {
+    background: #7db9e8; }
+  100% {
+    background: #7db9e8; } }
+
+@keyframes frontWave {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-20%); } }
+
+@keyframes middleWave {
+  from {
+    right: -1%; }
+  to {
+    right: -29%; } }
+
+@keyframes backWave {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-20%); } }
+
+@keyframes frontFish {
+  0% {
+    bottom: -10%;
+    left: 50%;
+    transform: rotate(45deg); }
+  10% {
+    bottom: 40%;
+    left: 40%;
+    transform: rotate(-45deg); }
+  20% {
+    bottom: -10%;
+    left: 30%;
+    transform: rotate(-20deg); }
+  100% {
+    bottom: -10%;
+    left: 30%;
+    transform: rotate(-20deg); } }
+
+@keyframes middleFish {
+  0% {
+    bottom: -10%;
+    left: 80%;
+    transform: rotate(45deg); }
+  10% {
+    bottom: 40%;
+    left: 70%;
+    transform: rotate(-45deg); }
+  20% {
+    bottom: -10%;
+    left: 60%;
+    transform: rotate(-20deg); }
+  100% {
+    bottom: -10%;
+    left: 30%;
+    transform: rotate(-20deg); } }
+
+@keyframes backFish {
+  0% {
+    bottom: -10%;
+    left: 10%;
+    transform: rotate(-180deg); }
+  10% {
+    bottom: 40%;
+    left: 20%;
+    transform: rotate(-230deg); }
+  20% {
+    bottom: -10%;
+    left: 30%;
+    transform: rotate(-100deg); }
+  100% {
+    bottom: -10%;
+    left: 30%;
+    transform: rotate(-20deg); } }
+
+@keyframes cloud1 {
+  0% {
+    left: 20%; }
+  100% {
+    left: 120%; } }
+
+@keyframes cloud1Replace {
+  0% {
+    left: -80%; }
+  100% {
+    left: 20%; } }
+
+@keyframes cloud2 {
+  0% {
+    left: 40%; }
+  100% {
+    left: 140%; } }
+
+@keyframes cloud2Replace {
+  0% {
+    left: -60%; }
+  100% {
+    left: 40%; } }
+
+@keyframes cloud3 {
+  0% {
+    left: 60%; }
+  100% {
+    left: 160%; } }
+
+@keyframes cloud3Replace {
+  0% {
+    left: -40%; }
+  100% {
+    left: 60%; } }
+
+@keyframes cloud4 {
+  0% {
+    left: 80%; }
+  100% {
+    left: 180%; } }
+
+@keyframes cloud4Replace {
+  0% {
+    left: -20%; }
+  100% {
+    left: 80%; } }
+
+@keyframes cloud5 {
+  0% {
+    left: 45%; }
+  100% {
+    left: 145%; } }
+
+@keyframes cloud5Replace {
+  0% {
+    left: -55%; }
+  100% {
+    left: 45%; } }
+
+@keyframes cloud6 {
+  0% {
+    left: 0%; }
+  100% {
+    left: 100%; } }
+
+@keyframes cloud6Replace {
+  0% {
+    left: -100%; }
+  100% {
+    left: 0%; } }
+
+@keyframes moon {
+  0% {
+    transform: translateY(0%); }
+  20% {
+    transform: translateY(0%); }
+  35% {
+    transform: translateY(80%); }
+  60% {
+    transform: translateY(80%); }
+  75% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(0%); } }
+
+@keyframes sun {
+  0% {
+    transform: translateY(-20%); }
+  20% {
+    transform: translateY(-20%); }
+  35% {
+    transform: translateY(90%); }
+  60% {
+    transform: translateY(90%); }
+  75% {
+    transform: translateY(-20%); }
+  100% {
+    transform: translateY(-20%); } }

@@ -1,0 +1,109 @@
+extends ./layout.pug
+
+block content
+	include ./_partials/navbar.pug
+	header
+		.header-content
+			.header-content-inner
+				h1 A place to test various fullstack javascript functionality and features
+				hr
+				p Check out the "Portfolio" section below to view projects i've created building a Node server from scratch
+				a(href="#portfolio", class="btn btn-primary btn-xl page-scroll") Portfolio
+
+	section#purpose
+		.container
+			.row
+				.col-lg-12.text-center
+					h2.section-heading Purpose Of This Website
+					hr.primary
+		.container
+			.row
+				.col-lg-3.col-md-6.text-center
+					.service-box
+						i(class="fa fa-4x fa-newspaper-o wow bounceIn text-primary", data-wow-delay=".2s")
+						h3 Up to Date
+						p.text-muted A playground for me to improve my understanding of fullstack Javascript development while keeping up with new trends.
+				.col-lg-3.col-md-6.text-center
+					.service-box
+						i.fa.fa-4x.fa-code.wow.bounceIn.text-primary
+						h3 Node.JS
+						p.text-muted Learn more about the 'whys' and 'hows' of Node.JS on all levels of development.
+				.col-lg-3.col-md-6.text-center
+					.service-box
+						i(class="fa fa-4x fa-bar-chart-o wow bounceIn text-primary", data-wow-delay=".1s")
+						h3 Express.JS
+						p.text-muted Learning how to leverage Express.JS to increase productivity.
+				.col-lg-3.col-md-6.text-center
+					.service-box
+						i(class="fa fa-4x fa-heart wow bounceIn text-primary", data-wow-delay=".3s")
+						h3 Made with Love
+						p.text-muted I wouldn't be doing this if I didn't enjoy it.  I love impressing myself as much as I love impressing others.
+
+	section#portfolio.no-padding
+		.container-fluid
+			.row.no-gutter
+				.col-lg-4.col-sm-6
+					a(href="/angular", class="portfolio-box")
+						img(src="img/angular.jpg", class="img-responsive", alt="")
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded AngularJS
+								.project-name Todo List
+				.col-lg-4.col-sm-6
+					a(href="/mobile", class="portfolio-box")
+						img(src="img/mobile.jpg", class="img-responsive", alt="")
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded Javascript and Mobile
+								.project-name Mobile Javascript
+				.col-lg-4.col-sm-6
+					a(href="/rest", class="portfolio-box")
+						img(src="img/rest.png", class="img-responsive", alt="")
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded Restful Node/Express
+								.project-name REST API
+				.col-lg-4.col-sm-6
+					a(href="/daynight-animation", class="portfolio-box")
+						img(src="img/daynight.jpg", class="img-responsive", alt="")
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded CSS Transitions and Animations
+								.project-name Day/Night Animation
+				.col-lg-4.col-sm-6
+					a(href="/flappy-turd", class="portfolio-box")
+						img(src="img/flappy.jpg", class="img-responsive", alt="")
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded Web Game
+								.project-name Flappy Turd
+				.col-lg-4.col-sm-6
+					a(href="/web-sockets", class="portfolio-box")
+						img(src="img/socket.jpg", class="img-responsive", alt="")
+						.portfolio-box-caption
+							.portfolio-box-caption-content
+								.project-category.text-faded Socket.io
+								.project-name Chat Application
+
+	//- aside.bg-dark
+	//- 	.container.text-center
+	//- 		.call-to-action
+	//- 			h2 Free Download at Start Bootstrap!
+	//- 			a(href="#", class="btn btn-default btn-xl wow tada") Download Now!
+
+	section#contact
+		.container
+			.row
+				.col-lg-8.col-lg-offset-2.text-center
+					h2.section-heading Let's Get In Touch!
+					hr.primary
+					p Like what you see?  Need a developer that has the drive and necessary skills to help reach your web development goals?  Shoot me an email and let's chat!
+				//- .col-lg-4.col-lg-offset-2.text-center
+				//- 	i.fa.fa-phone.fa-3x.wow.bounceIn
+				//- 	p 123-456-6789
+				.col-sm-12.text-center
+					i(class="fa fa-envelope-o fa-3x wow bounceIn", data-wow-delay=".1s")
+					p
+						a(href="mailto:brett84c@gmail.com") brett84c@gmail.com
+
+	include ./_partials/footer.pug

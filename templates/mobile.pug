@@ -1,0 +1,47 @@
+extends ./layout.pug
+
+block content
+	include ./_partials/navbar.pug
+	link(rel="stylesheet", type="text/css" href="css/mobile.css")
+	.mobile-container
+		h1 Newer Javascript Features (Some Require Mobile Device)
+		hr
+		div.coords-new
+			p
+				b Your Geolocation Coordinates are: 
+			p Latitude: 
+				b.coords-lat
+			p Longitude: 
+				b.coords-lon
+		#show-map
+		hr
+		#device-orientation
+			p 
+				b Device Orientation:
+			#absolute
+				p The absolute value is: 
+					i#abs-val
+			#alpha
+				p The alpha value is: 
+					i#alpha-val
+			#beta
+				p The beta value is: 
+					i#beta-val
+			#gamma
+				p The gamma value is: 
+					i#gamma-val
+			.phone-container
+				figure.cube
+					.front front
+					.left left
+					.right right
+					.top top
+					.bottom bottom
+					.back back
+		hr
+		#device-motion
+			p
+				b Device Motion:
+				
+	include ./_partials/footer.pug
+	script(src="js/mobile/mobile.js")

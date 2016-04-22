@@ -1,0 +1,53 @@
+.angular-main-container {
+	background:rgb(30,30,30);
+	height:100%;
+	width:100%;
+}
+#angular-todo {
+	height:auto;
+}
+#angular-todo h2,
+#angular-todo h3 {
+    color:#FFEBCD;
+}
+#angular i {
+	color:#F05F40;
+}
+.todo-input {
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+}
+.todo-list {
+	background:url(./../img/ricebg.png);
+	background-repeat: repeat;
+	min-height: 300px;
+	border-radius: 5px;
+	margin-top:20px;
+	padding:10px;
+}
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+.delete-todo {
+	cursor:pointer;
+	padding:10px;
+}
+.checkbox {
+	display:inline-block;
+	margin-left:40px;
+	cursor:pointer;
+}
+.unstyled {
+	list-style-type: none;
+}
+.angular-btn-primary {
+    border-radius: 5px;
+    border:none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding:10px;
+  	position: relative;
+  	margin-left:-45px;
+}

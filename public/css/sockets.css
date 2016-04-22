@@ -1,0 +1,40 @@
+body {
+  background: #282828; }
+
+#chat-container {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: 100px; }
+
+#chat-submit {
+  width: 100%;
+  color: #282828;
+  font-size: 30px;
+  border: 0;
+  min-height: 50px;
+  box-shadow: 0px 0px 8px 0px inset;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  padding-left: 5px; }
+
+#chat-window {
+  padding: 10px;
+  width: 100%;
+  background: darkcyan;
+  height: 500px;
+  overflow-y: scroll;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+#chat-window b {
+  color: khaki; }
+
+#open-connection {
+  color: darkseagreen; }
+
+h2,
+.desc {
+  color: white;
+  text-align: center; }

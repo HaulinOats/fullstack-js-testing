@@ -1,0 +1,9 @@
+extends ./layout.pug
+
+block content
+	include ./_partials/navbar.pug
+	link(rel="stylesheet", type="text/css" href="css/rebounce.css")
+				
+	include ./_partials/footer.pug
+	script(src="js/rebounce/matter.min.js")
+	script(src="js/rebounce/rebounce.js")

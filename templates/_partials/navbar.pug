@@ -1,0 +1,21 @@
+nav#mainNav.navbar.navbar-default.navbar-fixed-top
+	.container-fluid
+		.navbar-header
+			button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+				span(class="sr-only") Toggle navigation
+				span(class="icon-bar")
+				span(class="icon-bar")
+				span(class="icon-bar")
+			a(class="navbar-brand page-scroll", href="/") Brett Connolly - Node Experiments
+
+		if isHome
+			#bs-example-navbar-collapse-1.collapse.navbar-collapse
+				ul.nav.navbar-nav.navbar-right
+					li
+						a(href="http://www.brettdavidconnolly.com", target="_blank") My Website
+					li
+						a(class="page-scroll", href="#purpose") Purpose
+					li
+						a(class="page-scroll", href="#portfolio") Portfolio
+					li
+						a(class="page-scroll", href="#contact") Contact

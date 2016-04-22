@@ -1,0 +1,9 @@
+extends ./layout.pug
+
+block content
+	include ./_partials/navbar.pug
+	link(rel="stylesheet", type="text/css" href="css/flappyTurd.css")
+	script(src="js/flappyTurd/phaser.min.js")
+	script(src="js/flappyTurd/main.js")
+				
+	include ./_partials/footer.pug

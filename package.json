@@ -1,12 +1,13 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "Fullstack-JS",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "",
   "keywords": [
-    "OpenShift",
-    "Node.js",
-    "application",
-    "openshift"
+    "javascript",
+    "node.js",
+    "js",
+    "express",
+    "fullstack js"
   ],
   "author": {
     "name": "OpenShift",
@@ -18,18 +19,30 @@
     "type": "git",
     "url": "https://github.com/openshift/origin-server"
   },
-
   "engines": {
     "node": ">= 0.6.0",
     "npm": ">= 1.0.0"
   },
-
   "dependencies": {
-    "express": "~3.4.4"
+    "express": "^4.13.4",
+    "pug": "^2.0.0-alpha6",
+    "socket.io": "^1.4.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "express-generator": "^4.13.1",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3"
+  },
   "bundleDependencies": [],
-
   "private": true,
+  "scripts": {
+    "start": "node server.js"
+  }, 
   "main": "server.js"
 }

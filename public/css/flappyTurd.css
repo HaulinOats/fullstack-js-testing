@@ -1,0 +1,7 @@
+body {
+  background: #282828; }
+
+canvas {
+  position: relative;
+  top: 60px;
+  left: 100px; }

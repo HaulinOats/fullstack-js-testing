@@ -1,0 +1,31 @@
+extends ./layout.pug
+
+block content
+	include ./_partials/navbar.pug
+	link(rel="stylesheet", type="text/css" href="css/angular.css")
+	.angular-main-container
+		section#angular-todo(ng-controller="TodoListController as todoList")
+			.container
+				.row
+					.col-lg-12.text-center
+						h2 Angular Todo List App
+						hr.primary
+			.container
+				.row
+					form(ng-submit="todoList.addTodo()")
+						input(type="text", class="todo-input col-xs-10 col-xs-offset-1", ng-model="todoList.todoText", placeholder="Enter New Todo Item")
+						input.btn-primary.angular-btn-primary(type="submit", value="add")
+			.container
+				.row
+					.todo-list.col-xs-10.col-xs-offset-1
+						p {{todoList.remaining()}} of {{todoList.todos.length}} remaining
+						ul.unstyled
+							li(ng-repeat="todo in todoList.todos")
+								i.fa.fa-times.delete-todo(data-index="{{$index}}" ng-click="todoList.removeTodo(todo)")
+								.checkbox
+									input(type="checkbox", ng-model="todo.done")
+									span(class="done-{{todo.done}}") {{todo.text}}
+	
+	include ./_partials/footer.pug
+	script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js")
+	script(src="js/angular/todo.js")
