@@ -17,7 +17,7 @@ var express = require('express'),
 	io = require('socket.io')(server);
 
 	app.set('view engine', 'pug');
-  	app.use( express.static(__dirname+'/public') );
+  app.use( express.static(__dirname+'/public') );
 	app.set('views', __dirname + '/templates');
 	require('./routes')(app);
 
@@ -33,11 +33,10 @@ var express = require('express'),
 	  })
 	});
 
-	app.set('port', process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080);
-	app.set('ip', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
+	var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+	var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
-
-	http.createServer(app).listen(app.get('port') ,app.get('ip'), function () {
-	    console.log("✔ Express server listening at %s:%d ", app.get('ip'),app.get('port'));
-	    server();
+	//Open server for socket
+	server.listen(server_port, server_ip_address, function () {
+		console.log("Listening on " + server_ip_address + ", server_port " + server_port);
 	});
