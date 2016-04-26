@@ -89,10 +89,16 @@ gulp.task('pug', function(){
 	.pipe(livereload())
 })
 
+gulp.task('javascript', function(){
+	return gulp.src('public/js/**/*.js')
+	.pipe(livereload())
+})
+
 gulp.task('watch', function(){
 	gulp.watch('public/js/*.js', ['concatScripts']);
 	gulp.watch('public/scss/*.scss', ['sass']);
-	gulp.watch('templates/**/*.pug', ['pug'])
+	gulp.watch('templates/**/*.pug', ['pug']);
+	gulp.watch('public/js/**/*.js', ['javascript']);
 	livereload.listen();
 })
 

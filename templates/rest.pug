@@ -3,20 +3,11 @@ extends ./layout.pug
 block content
 	include ../templates/_partials/navbar.pug
 	link(rel="stylesheet", type="text/css" href="../css/rest.css")
-	.rest-container
+	.playlist-container
 		h1 REST API
-			if isRoot
-				p This is the root of the 'rest' route
-				p Type in whatever you want in the URL bar after '/rest/' or click on either of the links below to see how the router middleware checks if the parameter is an actual number or not
-				a(href="/rest/123", class="rest-request-button") Send '123' as a parameter
-				a(href="/rest/abc", class="rest-request-button") Send 'abc' as a parameter
-				p or make your own:
-				input.black-text#url-parameter(type='text', placeholder="Enter URL parameter")
-				input.black-text#submit-parameter(type="submit", value="GO")
-			else
-				p Parameter is a number: #{isNumber}
-				p URL Parameter: #{parameter}
-				a(href="/rest", class="rest-request-button") Back
+		p Enter in whatever value you would like send to the the REST API end point.  The server will parse your entry to tell you how many numbers, letters and symbols are in it.
+		input#rest-input(type="text", name="restInput", placeholder="Enter value to send to REST end point")
+		input#rest-submit(type="submit", value="Submit")
 
 	include ../templates/_partials/footer.pug
 	script(src="../js/rest/rest.js")

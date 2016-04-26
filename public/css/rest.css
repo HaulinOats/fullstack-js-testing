@@ -18,3 +18,31 @@
 
 .black-text {
   color: #000 !important; }
+
+#back-button {
+  display: block;
+  text-align: center;
+  font-size: 20px; }
+
+#rest-input {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  height: 35px;
+  color: black; }
+
+#rest-submit {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 10px;
+  color: black;
+  border-radius: 5px;
+  margin-top: 5px; }
+
+p {
+  text-align: center; }
+
+form input {
+  margin: 0 auto;
+  display: block; }

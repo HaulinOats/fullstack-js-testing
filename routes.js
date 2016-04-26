@@ -24,33 +24,34 @@ module.exports = function(app){
         res.render('rebounce');
     });
 
-    app.get('/rest', function(req, res){
-        res.render('rest');
-    });
-
     app.get('/web-sockets', function(req, res){
         res.render('web-sockets');
     })
 
     //Rest Router Handling
-    // restRouter.get('/', function(req, res, next){
-    //     res.render('rest', {isRoot:true});
-    // });
+    app.get('/rest', function(req, res){
+        res.render('rest');
+    });
+    app.get('/rest/:string', function(req, res){
+        var numCount    = 0,
+            letterCount = 0,
+            symbolCount = 0;
 
-    // restRouter.get('/:parameter', function(req, res, next){
-    //     var regEx = new RegExp(/^\d+(?:\.\d{1,2})?$/);
-    //     switch(regEx.test(req.params.parameter)){
-    //         case true:
-    //             res.render('rest', {
-    //                 isNumber: true,
-    //                 parameter:req.params.parameter
-    //             });
-    //             break;
-    //         default:
-    //             res.render('rest', {
-    //                 isNumber: false,
-    //                 parameter:req.params.parameter
-    //             });
-    //     }
-    // });
+        //loop through input string and find how many letter, numbers, and symbols are there
+        for (var i = 0; i < req.params.string.length; i++){
+            if(isNaN(req.params.string[i])) {
+                if(req.params.string[i].match(/[a-z]/i))
+                    letterCount++;
+                else
+                    symbolCount++;
+            } else
+                numCount++;
+        }
+
+        res.render('rest2', {"urlParam":req.params.string, "numCount":numCount, "letterCount":letterCount, "symbolCount":symbolCount});
+    });
+
+    app.get('/vue-playlist', function(req, res){
+        res.render('vue-playlist');
+    });
 }

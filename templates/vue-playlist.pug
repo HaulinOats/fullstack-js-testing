@@ -1,0 +1,32 @@
+extends ./layout.pug
+
+block content
+	include ../templates/_partials/navbar.pug
+	link(rel="stylesheet", type="text/css" href="../css/vue.css")
+	
+	h1 Vue.js - Mock Playlist
+	div#playlist-container
+		div.flex-playlist
+			div.list-header
+				b.song-title Song Name
+				b.song-artist Artist
+				b.song-time Song Length
+				div.clearfix
+			<div class="song-item" v-for="song in songs">
+				<b class="song-title"> {{song.title}}</b>
+				<b class="song-artist"> {{song.artist}}</b>
+				<b class="song-time"> {{song.time}}</b>
+			</div>
+			<div class="clearfix"></div>
+		h3 Enter New Song
+		form#new-song
+			input.new-song-input(type="text" name="title" placeholder="Enter song title")
+			input.new-song-input(type="text" name="artist" placeholder="Enter artist name")
+			input.new-song-input(type="text" name="time" placeholder="Enter song length")
+			button.submit-new-song(v-on:click.prevent="addSong") Add To Playlist
+
+	include ../templates/_partials/footer.pug
+	script(src="../js/vue-playlist/vue.js")
+	script(src="https://cdn.firebase.com/js/client/2.4.2/firebase.js")
+	script(src="https://cdn.jsdelivr.net/vuefire/1.0.0/vuefire.min.js")
+	script(src="../js/vue-playlist/vue-playlist.js")

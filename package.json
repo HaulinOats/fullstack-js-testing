@@ -10,9 +10,9 @@
     "fullstack js"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "Brett Connolly",
+    "email": "brett84c@gmail.com",
+    "url": "http://www.brettdavidconnolly.com/"
   },
   "homepage": "http://www.openshift.com/",
   "repository": {
@@ -26,7 +26,8 @@
   "dependencies": {
     "express": "^4.13.4",
     "pug": "^2.0.0-alpha6",
-    "socket.io": "^1.4.5"
+    "socket.io": "^1.4.5",
+    "vue": "^1.0.21"
   },
   "devDependencies": {
     "express-generator": "^4.13.1",
@@ -42,7 +43,7 @@
   "bundleDependencies": [],
   "private": true,
   "scripts": {
-     "start": "node server.js"
+    "start": "node server.js"
   },
   "main": "server.js"
 }

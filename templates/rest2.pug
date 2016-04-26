@@ -1,0 +1,15 @@
+extends ./layout.pug
+
+block content
+	include ../templates/_partials/navbar.pug
+	link(rel="stylesheet", type="text/css" href="../css/rest.css")
+	.rest-container
+		h1 REST API (End Point)
+			p Parameter is: #{urlParam}
+			p Number count: #{numCount}
+			p Letter count: #{letterCount}
+			p Symbol count: #{symbolCount}
+		a#back-button(href="/rest") Back to Rest Home Page
+
+	include ../templates/_partials/footer.pug
+	script(src="../js/rest/rest.js")
