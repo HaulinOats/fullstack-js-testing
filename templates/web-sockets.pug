@@ -6,10 +6,13 @@ block content
 	
 	div#chat-container
 		h2 Socket.io Chat Example
-		p.desc Input whatever you'd like.  The server will return a random snippet of #[a(href="http://baconipsum.com/" target="_blank") Bacon Ipsum].  
+		p.desc Input whatever you'd like.  The server will return the message to the sending user and all others connected to this chat window.  Feel free to #[a(href="/web-sockets" target="_blank") open this page in a new tab] to simulate additional users connnecting to the same chat.
 		p.desc Web sockets enable a user to create a communication session with a server which vastly reduces latency and bandwidth compared to traditional, static server calls. If you would like to learn more about web sockets and why they are so awesome, click #[a(href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank") here].
 		input(type="text" id="chat-submit" placeholder="Enter Chat Message Here and Press 'Enter'")
 		div#chat-window
+			div#active-users
+				p#active-users-count
+				p Active User(s)
 				
 	include ./_partials/footer.pug
 	script(src="/socket.io/socket.io.js")
