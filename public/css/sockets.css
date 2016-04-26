@@ -26,10 +26,23 @@ body {
   overflow-y: scroll;
   color: white;
   border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px; }
+  border-bottom-left-radius: 5px;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; }
 
 #chat-window b {
   color: khaki; }
+
+#active-users {
+  position: absolute;
+  right: 35px;
+  font-size: 20px;
+  text-align: center; }
+
+#active-users p {
+  margin: 0; }
+
+#active-users-count {
+  font-size: 25px; }
 
 #open-connection {
   color: darkseagreen; }
