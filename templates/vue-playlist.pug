@@ -13,9 +13,9 @@ block content
 				b.song-time Song Length
 				div.clearfix
 			<div class="song-item" v-for="song in songs">
-				<b class="song-title"> {{song.title}}</b>
-				<b class="song-artist"> {{song.artist}}</b>
-				<b class="song-time"> {{song.time}}</b>
+				<b class="song-title" v-text="song.title"></b>
+				<b class="song-artist" v-text="song.artist"></b>
+				<b class="song-time" v-text="song.time"></b>
 			</div>
 			<div class="clearfix"></div>
 		h3 Enter New Song
