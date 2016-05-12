@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "express": "^4.13.4",
+    "mysql": "^2.10.2",
     "pug": "^2.0.0-alpha6",
     "socket.io": "^1.4.5",
     "vue": "^1.0.21"

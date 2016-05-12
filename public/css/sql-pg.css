@@ -1,0 +1,8 @@
+body {
+  background: #282828;
+  padding: 70px 10px 0 10px;
+  color: white; }
+
+#sql-pg-table td,
+#sql-pg-table th {
+  padding-left: 15px; }

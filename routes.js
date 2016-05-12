@@ -1,5 +1,13 @@
 //Routes
 module.exports = function(app){
+    var mysql = require('mysql');
+    var connection = mysql.createConnection({
+        host : 'sql5.freemysqlhosting.net',
+        user : "sql5119092",
+        password: "HfATbFTFpy",
+        database: "sql5119092"
+    });
+
     app.get('/', function(req, res){
         res.render('index', {isHome: true});
     });
@@ -53,5 +61,19 @@ module.exports = function(app){
 
     app.get('/vue-playlist', function(req, res){
         res.render('vue-playlist');
+    });
+
+    // var userRouter = express.Router();
+    // var itemRouter = express.Router({margeParams: true});
+    app.get('/sql-playground', function(req, res){
+        connection.query('SELECT * from `users`', function(error, results, fields){
+            if(error)
+                console.log('error on connection: ', error);
+            else{
+                console.log('connection successful: ');
+                console.log(results);
+                res.render('sql-playground', {'users':results});
+            }
+        });
     });
 }

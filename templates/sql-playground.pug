@@ -1,0 +1,25 @@
+extends ./layout.pug
+
+block content
+	include ../templates/_partials/navbar.pug
+	link(rel="stylesheet", type="text/css" href="../css/sql-pg.css")
+	.playlist-container
+		h1 SQL Playground
+		<table id="sql-pg-table">
+			<tr>
+				<th>Id</th>
+				<th>Email</th>
+				<th>Favorite Store</th>
+				<th>Is Admin?</th>
+			</tr>
+		for user in users
+			<tr>
+				<td>#{user.id}</td>
+				<td>#{user.email}</td>
+				<td>#{user.favorite_store}</td>
+				<td>#{user.isAdmin}</td>
+			</tr>
+		</table>
+
+	include ../templates/_partials/footer.pug
+	script(src="../js/sql/sql-pg.js")
